@@ -19,3 +19,10 @@
     - StyleGuides
 
 - [**Módulos**](/docs/contents/mod001/content004.md)
+    - Composição do modulo
+    - Gerar modulo
+    - StyleGuide
+
+- [**Templates**](/docs/contents/mod001/content005.md)
+    - Demonstração do dinamismo entre template e componente
+
