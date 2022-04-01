@@ -26,3 +26,4 @@
 - [**Templates**](/docs/contents/mod001/content005.md)
     - Demonstração do dinamismo entre template e componente
 
+- [**Serviços**](/docs/contents/mod001/content006.md)
