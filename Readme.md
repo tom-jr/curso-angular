@@ -1,5 +1,7 @@
 # Angular
-## Modulo001
+
+## Modulo001 - Introdução
+
 - [**Introdução**](/docs/contents/mod001/content001.md)
     - Tópicos do curso
     - Requisitos
@@ -27,3 +29,14 @@
     - Demonstração do dinamismo entre template e componente
 
 - [**Serviços**](/docs/contents/mod001/content006.md)
+    - O que é
+    - Criar Serviço
+    - Demo Injeção
+
+## Modulo002 - Data Binding
+
+- [**Property Binding e Interpolação**](/docs/contents/mod002/content001.md)
+- Interpolação
+- Property bind
+
+- [**Class e Style binding**](/docs/contents/mod002/content002.md)
