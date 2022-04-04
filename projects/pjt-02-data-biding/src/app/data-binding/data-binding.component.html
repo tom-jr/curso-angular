@@ -1,7 +1,73 @@
 <section class="property-binding">
-    <article>
+    <!--  <article>
         <h3>Interpolation/Interpolação</h3>
         <p>String renderizada com Interpolação: {{ url }}</p>
         <p>Resultado de 1 + 1 = {{1 + 1}}</p>
+    </article>
+</section> -->
+
+
+    <article>
+        <h3>Class e Style Binding</h3>
+
+        <div>
+            Selecione uma classe:
+            <select #classeSelected (change)="changeValue()">
+
+                <option value="alert-success">
+                    success
+                </option>
+                <option value="alert-danger">
+                    danger
+                </option>
+                <option value="alert-warning">
+                    warning
+                </option>
+                <option value="alert-info">
+                    info
+                </option>
+
+            </select>
+
+            <br>
+            <br>
+
+
+            <h2 class = "alert {{classeSelected.value}}">Cor de acordo com o valor do select </h2>
+
+
+
+            <div class="alert " role="alert" 
+            [class.alert-success] = "classeSelected.value == 'alert-success'"
+            [style.display]="classeSelected.value == 'alert-success' ? 'block':'none'"
+            >
+                A simple success alert—check it out!
+            </div>
+
+            <div class="alert " role="alert" 
+            [class.alert-danger] = "classeSelected.value == 'alert-danger'"
+            [style.display]="classeSelected.value == 'alert-danger' ? 'block':'none'"
+            
+            >
+                A simple danger alert—check it out!
+            </div>
+
+            <div class="alert " role="alert" [class.alert-warning] = "classeSelected.value == 'alert-warning'"
+            [style.display]="classeSelected.value == 'alert-warning' ? 'block':'none'"
+            
+            >
+                A simple warning alert—check it out!
+            </div>
+
+            <div class="alert " role="alert" [class.alert-info] = "classeSelected.value == 'alert-info'"
+            [style.display]="classeSelected.value == 'alert-info' ? 'block':'none'"
+            
+            >
+                A simple info alert—check it out!
+            </div>
+
+
+        </div>
+
     </article>
 </section>

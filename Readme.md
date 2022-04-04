@@ -36,7 +36,10 @@
 ## Modulo002 - Data Binding
 
 - [**Property Binding e Interpolação**](/docs/contents/mod002/content001.md)
-- Interpolação
-- Property bind
+    - Interpolação
+    - Property bind
 
 - [**Class e Style binding**](/docs/contents/mod002/content002.md)
+    - Instalar BootStrap
+    - ClassBinding
+    - StyleBinding
