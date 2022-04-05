@@ -7,7 +7,7 @@
 </section> -->
 
 
-    <article>
+    <!-- <article>
         <h3>Class e Style Binding</h3>
 
         <div>
@@ -69,5 +69,19 @@
 
         </div>
 
+    </article> -->
+
+
+    <article>
+        <h3>Event Binding</h3>
+        <div>
+            <button class="btn btn-primary" (click)="clicked()">Click Here</button>
+
+            <br><br>
+
+            <input #fieldInput type="text" (keyup)="onKeyUp(fieldInput.value)" (blur)="save(fieldInput.value)">
+            <p>Valor atual: {{this.valueActual}}</p>
+            <p>Valor atual: {{this.savedValue}}</p>
+        </div>
     </article>
 </section>

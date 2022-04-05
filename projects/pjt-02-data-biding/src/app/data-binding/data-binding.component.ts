@@ -6,13 +6,28 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./data-binding.component.scss']
 })
 export class DataBindingComponent implements OnInit {
+  valueActual?: string;
+  savedValue?: string;
 
   constructor() { }
   url: string = "loiane.com";
   ngOnInit(): void {
   }
 
-  changeValue(){
-    
+  changeValue() {
+
+  }
+
+  clicked() {
+    alert('Im clicked!');
+  }
+
+  onKeyUp(event: string) {
+    this.valueActual = event
+  }
+
+  save(event: string){
+    this.savedValue = event;
+
   }
 }

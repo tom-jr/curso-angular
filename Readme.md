@@ -43,3 +43,8 @@
     - Instalar BootStrap
     - ClassBinding
     - StyleBinding
+
+- [**Event binding**](/docs/contents/mod002/content003.md)
+    - Event Binding
+    - Captura value de Input
+    - Operador '**?**'
