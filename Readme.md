@@ -54,3 +54,6 @@
         - [NgModel]
         - (ngModelChange)
         - [(ngModel)]
+
+- [**Input properties**](/docs/contents/mod002/content005.md)
+    - @Input
