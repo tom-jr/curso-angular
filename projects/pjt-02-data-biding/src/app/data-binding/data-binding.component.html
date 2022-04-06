@@ -72,7 +72,7 @@
     </article> -->
 
 
-    <article>
+    <!-- <article>
         <h3>Event Binding</h3>
         <div>
             <button class="btn btn-primary" (click)="clicked()">Click Here</button>
@@ -83,5 +83,33 @@
             <p>Valor atual: {{this.valueActual}}</p>
             <p>Valor atual: {{this.savedValue}}</p>
         </div>
-    </article>
+    </article> -->
+
+
+    <section class="to-way-binding">
+        <article>
+            <h3>Two way data Binding</h3>
+            <div>
+
+                <input type="text" #inputField
+                [value]="nome"
+                (input)="addName(inputField.value)"
+                >
+                <br><br>
+
+                <input type="text" #inputField2
+                [ngModel]="this.nome"
+                (ngModelChange)="addName(inputField2.value)"
+                >
+                <br><br>
+
+                <input type="text" #inputField2
+                [(ngModel)]="this.nome"
+                >
+
+                <h4>Nome inputted: {{this.nome}}</h4>
+            </div>
+        </article>
+    </section>
+
 </section>

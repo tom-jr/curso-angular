@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class DataBindingComponent implements OnInit {
   valueActual?: string;
   savedValue?: string;
+  nome?:string = "Aburame";
 
   constructor() { }
   url: string = "loiane.com";
@@ -29,5 +30,9 @@ export class DataBindingComponent implements OnInit {
   save(event: string){
     this.savedValue = event;
 
+  }
+
+  addName(inputField:string){
+    this.nome  = inputField;
   }
 }

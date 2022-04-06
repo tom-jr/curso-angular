@@ -48,3 +48,9 @@
     - Event Binding
     - Captura value de Input
     - Operador '**?**'
+
+- [**Two-way binding**](/docs/contents/mod002/content004.md)
+    - FormsModule
+        - [NgModel]
+        - (ngModelChange)
+        - [(ngModel)]
