@@ -8,7 +8,8 @@ import { Component, OnInit } from '@angular/core';
 export class DataBindingComponent implements OnInit {
   valueActual?: string;
   savedValue?: string;
-  nome?:string = "Aburame";
+  nome?: string = "Aburame";
+  valorInicial: number = 15;
 
   constructor() { }
   url: string = "loiane.com";
@@ -27,12 +28,16 @@ export class DataBindingComponent implements OnInit {
     this.valueActual = event
   }
 
-  save(event: string){
+  save(event: string) {
     this.savedValue = event;
 
   }
 
-  addName(inputField:string){
-    this.nome  = inputField;
+  addName(inputField: string) {
+    this.nome = inputField;
+  }
+
+  getOutput(event: any) {
+    console.log(event.newValue);
   }
 }

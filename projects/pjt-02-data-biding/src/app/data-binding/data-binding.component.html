@@ -117,6 +117,8 @@
 
             <app-input-property [getAttribute]="this.nome" ></app-input-property>
 
+            <app-output-property [getValue] = "this.valorInicial" (throwOutput)="getOutput($event)" ></app-output-property>
+
         </article>
 
     </section>

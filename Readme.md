@@ -57,3 +57,5 @@
 
 - [**Input properties**](/docs/contents/mod002/content005.md)
     - @Input
+
+- [**OutPut Property**](/docs/contents/mod002/content006.md)
