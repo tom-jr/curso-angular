@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, ElementRef, EventEmitter, Input, OnInit, Output, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-output-property',
@@ -9,6 +9,8 @@ export class OutputPropertyComponent implements OnInit {
 
   @Input('getValue') valor: number = 0;
 
+  @ViewChild('inputField') element!: ElementRef;
+
  @Output('throwOutput') valueChanged = new EventEmitter();
 
   constructor() { }
@@ -17,13 +19,13 @@ export class OutputPropertyComponent implements OnInit {
   }
 
   sum() {
-    this.valor++;
-    this.valueChanged.emit({ newValue: this.valor });
+    this.element.nativeElement.value ++
+    this.valueChanged.emit({ newValue: this.element.nativeElement.value });
   }
 
   sub() {
-    this.valor--;
-    this.valueChanged.emit({ newValue: this.valor });
+    this.element.nativeElement.value --
+    this.valueChanged.emit({ newValue:  this.element.nativeElement.value  });
   }
 
 }
