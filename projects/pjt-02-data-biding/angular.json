@@ -106,9 +106,21 @@
             ],
             "scripts": []
           }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "src/**/*.ts",
+              "src/**/*.html"
+            ]
+          }
         }
       }
     }
   },
-  "defaultProject": "pjt-02-data-biding"
+  "defaultProject": "pjt-02-data-biding",
+  "cli": {
+    "defaultCollection": "@angular-eslint/schematics"
+  }
 }

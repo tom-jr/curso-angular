@@ -14,6 +14,7 @@ export class DataBindingComponent implements OnInit {
   constructor() { }
   url: string = "loiane.com";
   ngOnInit(): void {
+    console.log('Not Empty');
   }
 
   changeValue() {

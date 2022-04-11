@@ -7,10 +7,11 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class InputPropertyComponent implements OnInit {
 
-  @Input('getAttribute') attributeReceptor?: string; 
+  @Input() getAttribute?: string; 
   constructor() { }
 
   ngOnInit(): void {
+    console.log('Not Empty');
   }
 
 }

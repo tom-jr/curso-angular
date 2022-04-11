@@ -7,25 +7,26 @@ import { Component, ElementRef, EventEmitter, Input, OnInit, Output, ViewChild }
 })
 export class OutputPropertyComponent implements OnInit {
 
-  @Input('getValue') valor: number = 0;
+  @Input() getValue: number = 0;
 
-  @ViewChild('inputField') element!: ElementRef;
+  @ViewChild('inputField') inputField!: ElementRef;
 
- @Output('throwOutput') valueChanged = new EventEmitter();
+ @Output() throwOutput = new EventEmitter();
 
   constructor() { }
 
   ngOnInit(): void {
+    console.log('Not Empty')
   }
 
   sum() {
-    this.element.nativeElement.value ++
-    this.valueChanged.emit({ newValue: this.element.nativeElement.value });
+    this.inputField.nativeElement.value ++
+    this.throwOutput.emit({ newValue: this.inputField.nativeElement.value });
   }
 
   sub() {
-    this.element.nativeElement.value --
-    this.valueChanged.emit({ newValue:  this.element.nativeElement.value  });
+    this.inputField.nativeElement.value --
+    this.throwOutput.emit({ newValue:  this.inputField.nativeElement.value  });
   }
 
 }
