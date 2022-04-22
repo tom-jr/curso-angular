@@ -104,6 +104,6 @@ Para criar arquivos ts,css,html, etc... separamos as definições por '**.**'
     meu-primeiro.component.html
     meu-primeiro.component.css
     
-Declaração de classes devem ter o nome da class em CameCase.
+Declaração de classes devem ter o nome da class em CamelCase.
 
 

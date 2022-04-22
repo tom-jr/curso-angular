@@ -70,3 +70,11 @@
 - [**Angular CLI**](/docs/contents/mod003/content001.md)
     - Comando CLI
     - Ng Lint
+
+## Modulo004 Diretivas
+
+- [**Introdução**](/docs/contents/mod004/content001.md)
+    - O que são
+    - Tipos de diretivas
+
+- [**NgIf**](/docs/contents/mod004/content002.md)

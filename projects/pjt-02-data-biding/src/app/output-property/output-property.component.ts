@@ -7,7 +7,7 @@ import { Component, ElementRef, EventEmitter, Input, OnInit, Output, ViewChild }
 })
 export class OutputPropertyComponent implements OnInit {
 
-  @Input() getValue: number = 0;
+  @Input() getValue?: number;
 
   @ViewChild('inputField') inputField!: ElementRef;
 
