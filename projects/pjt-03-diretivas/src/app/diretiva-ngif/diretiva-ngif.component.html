@@ -1,0 +1,33 @@
+<h4>NgIf</h4>
+
+<div>
+    <h3>Lista de cursos</h3>
+    <ul *ngIf="this.cursos.length > 0; else elseBlock">
+        <li *ngFor="let curso of cursos; else elseBlock">{{curso}}</li>
+    </ul>
+    <ng-template #elseBlock>Não há cursos cadastrados</ng-template>
+</div>
+
+
+<div>
+    <h3>Lista de cursos</h3>
+    <ul [hidden]="this.cursos.length === 0">
+        <li *ngFor="let curso of cursos">{{curso}}</li>
+    </ul>
+    <p [hidden]="this.cursos.length > 0">Não há cursos cadastrados</p>
+</div>
+
+
+<ng-template [ngIf]="this.cursos.length > 0">
+    <div>
+        <h3>Lista de cursos</h3>
+        <ul *ngIf="this.cursos.length > 0; else elseBlock">
+            <li *ngFor="let curso of cursos; else elseBlock">{{curso}}</li>
+        </ul>
+        <ng-template #elseBlock>Não há cursos cadastrados</ng-template>
+    </div>
+</ng-template>
+
+<div>
+    <button class="btn btn-primary" (click)="changeRecords()">Change records</button>
+</div>

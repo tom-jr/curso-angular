@@ -1,0 +1,48 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">Navbar</a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link " [class.active]="this.selected === 'home'" aria-current="page"
+                        (click)="this.selected = 'home'">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" [class.active]="this.selected === 'features'"
+                        (click)="this.selected = 'features'">Features</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" [class.active]="this.selected === 'pricing'"
+                        (click)="this.selected = 'pricing'">Pricing</a>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+</nav>
+
+<div class="container" [ngSwitch]="this.selected">
+    <p *ngSwitchCase="'features'">Features Selecionado</p>
+    <p *ngSwitchCase="'pricing'">Pricing Selecionado</p>
+    <p *ngSwitchDefault>Home</p>
+</div>
+
+<div class="container" [ngSwitch]="this.selected">
+    <ng-template [ngSwitchCase]="'features'">
+        <p>Features Selecionado</p>
+    </ng-template>
+
+    <ng-template [ngSwitchCase]="'pricing'">
+        <p>Pricing Selecionado</p>
+    </ng-template>
+
+    <ng-template [ngSwitchCase]="'home'" ngSwitchDefault>
+        <p>Home Selecionado</p>
+    </ng-template>
+</div>

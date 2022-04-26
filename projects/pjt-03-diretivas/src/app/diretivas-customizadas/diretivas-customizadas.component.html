@@ -1,0 +1,19 @@
+<p fundoAmarelo>diretivas-customizadas works!</p>
+
+<p highlightMouse>Texto com highlight onMouseOver</p>
+
+<p [highlight]="'grey'" [highlightColor]="'yellow'">Texto com highlight</p>
+
+
+
+<div>
+    <h3>Lista de cursos</h3>
+    <ul *ngIf="this.cursos.length > 0">
+        <li *ngFor="let curso of cursos; else elseBlock">{{curso}}</li>
+    </ul>
+    <div *ngElse="this.cursos.length > 0">Não há cursos cadastrados</div>
+</div>
+
+<div>
+    <button class="btn btn-primary" (click)="changeRecords()">Change records</button>
+</div>

@@ -78,3 +78,30 @@
     - Tipos de diretivas
 
 - [**NgIf**](/docs/contents/mod004/content002.md)
+
+- [**NgSwitch e NgSwitchCase**](/docs/contents/mod004/content003.md)
+
+- [**NgFor**](/docs/contents/mod004/content004.md)
+
+- [**Templates**](/docs/contents/mod004/content005.md)
+
+- [**ngClass, ngStyle**](/docs/contents/mod004/content006.md)
+    - Operador elves
+
+- [**ng Content**](/docs/contents/mod004/content007.md)
+
+- [**Criando Diretivas**](/docs/contents/mod004/content008.md)
+
+- [**HostListener HostBinding**](/docs/contents/mod004/content009.md)
+
+- [**Input e propertyBind em Diretivas**](/docs/contents/mod004/content010.md)
+
+- [**Diretiva ng-else**](/docs/contents/mod004/content011.md)
+
+
+
+
+
+
+
+

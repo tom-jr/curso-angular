@@ -1,0 +1,15 @@
+<h1>Ng Class</h1>
+
+<h1 class="bi" style="width: 200px"
+[class.bi-star]="!myFavorite"
+[class.bi-star-fill]="myFavorite"
+></h1>
+<br>
+<h1 class="bi" style="width: 200px"
+[ngClass]="{
+    'bi-star':!myFavorite,
+    'bi-star-fill':myFavorite
+}"
+></h1>
+<br>
+<button class="btn btn-primary" (click)="changeValue()">Chang Value</button>
