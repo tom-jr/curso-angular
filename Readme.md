@@ -99,6 +99,16 @@
 - [**Diretiva ng-else**](/docs/contents/mod004/content011.md)
 
 
+## Modulo005 Serviços
+
+- [**Services**](/docs/contents/mod005/content01.md)
+    - Emitir eventos de services
+
+
+## Modulo006 Pipes
+
+- [**Pipes**](/docs/contents/mod006/content01.md)
+
 
 
 
