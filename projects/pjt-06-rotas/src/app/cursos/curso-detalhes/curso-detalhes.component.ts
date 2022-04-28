@@ -1,7 +1,7 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Subscription } from 'rxjs';
-import { CursosService } from '../cursos/cursos.service';
+import { CursosService } from '../cursos.service';
 
 @Component({
   selector: 'app-curso-detalhes',
@@ -24,7 +24,6 @@ export class CursoDetalhesComponent implements OnInit, OnDestroy {
      this.notFound(this.curso);
     });
 
-    
   }
   
   ngOnDestroy(): void {

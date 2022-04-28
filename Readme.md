@@ -116,6 +116,11 @@
 - [**RouterLink**](/docs/contents/mod007/content02.md)
     - Aplicando css em rotas ativas
     - Definindo e extraindo paramentos de rotas
+
+- [**Definindo e extraindo parâmetros de URL**](/docs/contents/mod007/content03.md)
+
+- [**Rotas Filhas**](/docs/contents/mod007/content04.md)
+
     
 
 

@@ -1,8 +1,11 @@
 
 <h3>Cursos</h3>
 
+<p>Page: {{this.page}}</p>
   <div class="collection">
     <a class="collection-item" *ngFor="let item of this.cursos"
     [routerLink]="['/cursos',item.id]"
     >{{item.curso}}</a>
   </div>
+
+  <button class="btn btn-primary" (click)="nextPage()">next page</button>

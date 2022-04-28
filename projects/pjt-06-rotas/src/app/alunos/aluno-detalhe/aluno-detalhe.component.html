@@ -1,0 +1,20 @@
+<table>
+    <thead>
+        <tr>
+            <th>código</th>
+            <th>Nome</th>
+            <th>Email</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr>
+            <td>{{this.aluno.id}}</td>
+            <td>{{this.aluno.nome}}</td>
+            <td>{{this.aluno.email}}</td>
+        </tr>
+    </tbody>
+
+</table>
+
+<button style="margin: 10px;" class="btn btn-primary" (click)="navigateToAlunoForm()">Editar</button>

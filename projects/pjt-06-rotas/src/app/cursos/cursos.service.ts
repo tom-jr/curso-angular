@@ -1,9 +1,6 @@
 import { Injectable } from '@angular/core';
-import { CursosComponent } from './cursos.component';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class CursosService {
 
   constructor() { }
