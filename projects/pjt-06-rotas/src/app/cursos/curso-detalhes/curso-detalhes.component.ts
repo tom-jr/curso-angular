@@ -17,6 +17,7 @@ export class CursoDetalhesComponent implements OnInit, OnDestroy {
   constructor(private routeActive: ActivatedRoute, private cursosService: CursosService, private router:Router) { }
   
   ngOnInit(): void {
+    console.log('Entrou no NgInit do Curso detalhes');
     // this.id = this.route.snapshot.params['id'];
     this.subscription = this.routeActive.params.subscribe((params: any)=>{
       this.id = params['id'];
@@ -32,7 +33,7 @@ export class CursoDetalhesComponent implements OnInit, OnDestroy {
   
   notFound(curso: any){
 if(!curso){
-  this.router.navigate(['/not-found']);
+  this.router.navigate(['cursos/not-found']);
 }
   }
 }

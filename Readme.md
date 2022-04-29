@@ -121,6 +121,8 @@
 
 - [**Rotas Filhas**](/docs/contents/mod007/content04.md)
 
+- [**Lazy Load**](/docs/contents/mod007/content05.md)
+
     
 
 

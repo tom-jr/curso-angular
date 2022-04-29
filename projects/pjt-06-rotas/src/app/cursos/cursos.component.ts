@@ -26,10 +26,13 @@ export class CursosComponent implements OnInit, OnDestroy {
   }
   ngOnDestroy(): void {
     this.subscription.unsubscribe();
+    console.log('TESTE');
   }
 
   nextPage() {
+    console.log("this.nextPage")
     this.page++;
+    console.log(this.page)
     this.router.navigate(['/cursos'], { queryParams: { 'page': this.page } });
   }
 }
