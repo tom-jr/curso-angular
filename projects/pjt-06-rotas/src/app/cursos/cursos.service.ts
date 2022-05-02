@@ -1,21 +1,28 @@
 import { Injectable } from '@angular/core';
+import { Curso } from './models/curso.model';
 
 @Injectable()
 export class CursosService {
 
+  cursos: Curso[] = [
+    { curso: 'Java', id: 1 },
+    { curso: 'Javascript', id: 2 },
+    { curso: 'Angular', id: 3 },
+    { curso: 'SpringBoot', id: 4 },
+  ];
   constructor() { }
 
   getCursos() {
-    return [
-      { curso: 'Java', id: 1 },
-      { curso: 'Javascript', id: 2 },
-      { curso: 'Angular', id: 3 },
-      { curso: 'SpringBoot', id: 4 },
-    ];
+    return this.cursos;
   }
 
   getCurso(id: number) {
-
-    return this.getCursos().find((item) => item.id == id);
+    let curso = new Curso();
+    for (let i = 0; i < this.cursos.length; i++) {
+      if (this.cursos[i].id == id) {
+        curso = this.cursos[i];
+      }
+    }
+    return curso;
   }
 }

@@ -1,7 +1,9 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Subscription } from 'rxjs';
+import { Aluno } from '../alunos/models/aluno.model';
 import { CursosService } from './cursos.service';
+import { Curso } from './models/curso.model';
 
 @Component({
   selector: 'app-cursos',
@@ -11,7 +13,7 @@ import { CursosService } from './cursos.service';
 export class CursosComponent implements OnInit, OnDestroy {
 
   page!: number;
-  cursos!: any;
+  cursos!: Curso[];
   subscription!: Subscription;
   constructor(private cursosService: CursosService, private activeRoute: ActivatedRoute, private router: Router) {
 
@@ -26,7 +28,6 @@ export class CursosComponent implements OnInit, OnDestroy {
   }
   ngOnDestroy(): void {
     this.subscription.unsubscribe();
-    console.log('TESTE');
   }
 
   nextPage() {

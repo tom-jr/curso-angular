@@ -1,11 +1,12 @@
-import { Injectable } from '@angular/core';
-import { ActivatedRouteSnapshot, CanActivate, CanLoad, Route, Router, RouterStateSnapshot, UrlSegment, UrlTree } from '@angular/router';
-import { Observable } from 'rxjs';
-import { AuthService } from '../login/auth.service';
+# Can Load
 
-@Injectable({
-  providedIn: 'root'
-})
+é uma implementação que possibilita organizar o load dos módulos.
+assim, permitindo configurar o loading de módulos de acordo com a logica
+que desejarmos implementar
+
+O método pode ser implementado no App.Auth>Guard:
+
+~~~ javascript
 export class AuthGuard implements CanActivate, CanLoad {
 
 
@@ -32,3 +33,7 @@ export class AuthGuard implements CanActivate, CanLoad {
     return false;
   }
 }
+~~~
+
+assim canLoad vai verificar se pode acessar o componente e o canLoad verifica se pode carregaR o componente
+ou o seu modulo.

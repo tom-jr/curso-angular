@@ -124,6 +124,15 @@
 - [**Lazy Load**](/docs/contents/mod007/content05.md)
 
 - [**Guard Router**](/docs/contents/mod007/content06.md)
+    - CanActivate
+    - CanActivateChildren
+
+- [**CanDeactivate**](/docs/contents/mod007/content07f.md)
+
+- [**Resolve**](/docs/contents/mod007/content08.md)
+
+- [**Can Load**](/docs/contents/mod007/content09.md)
+
 
 
 

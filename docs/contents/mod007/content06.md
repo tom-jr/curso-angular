@@ -47,3 +47,6 @@ export class AppRoutingModule {
 
 }
 ~~~
+
+Nos podemos usar os Objetos ***ActivatedRouteSnapshot***, ***RouterStateSnapshot*** do método **canActivate**
+para realizar as logicas de guard de cada path das rotas
