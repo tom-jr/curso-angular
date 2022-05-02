@@ -1,8 +1,8 @@
-<nav>
+<nav *ngIf="this.ShowMenu">
   <div class="nav-wrapper">
     <a routerLink="" class="brand-logo">Rotas</a>
     <ul id="nav-mobile" class="right hide-on-med-and-down">
-      <li routerLinkActive="active"><a routerLink="/login">Login</a></li>
+      <li *ngIf="!this.ShowMenu" routerLinkActive="active"><a routerLink="/login">Login</a></li>
       <li routerLinkActive="active"><a routerLink="/cursos" [queryParams]="{page: 1}">Cursos</a></li>
       <li routerLinkActive="active"><a routerLink="/alunos">Alunos</a></li>
       <!-- <li routerLinkActive="active"><a [routerLink]="['/cursos',idCurso.value]">Cursos com id</a></li> -->

@@ -123,7 +123,10 @@
 
 - [**Lazy Load**](/docs/contents/mod007/content05.md)
 
-    
+- [**Guard Router**](/docs/contents/mod007/content06.md)
+
+
+
 
 
 
