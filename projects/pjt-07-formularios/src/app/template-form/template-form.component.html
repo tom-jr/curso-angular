@@ -1,0 +1,185 @@
+<form #f="ngForm" (ngSubmit)="onSubmit(f)" class="row " >
+    <div class="mb-3 form-group col-md-12">
+        <label for="nome" class="form-label">Nome</label>
+        <input  [class.is-invalid]="!nome.valid && nome.touched"
+        type="text"
+        class="form-control"
+        id="nome"
+        placeholder="Nome"
+        name="nome"
+        [(ngModel)]="this.user.nome"
+        required 
+        #nome="ngModel">
+        
+        <div *ngIf="!nome.valid && nome.touched" class="invalid-feedback">
+            Nome é obrigatório
+        </div>
+    </div>
+
+
+
+    <div class="mb-3 form-group col-md-12">
+        <label for="email" class="form-label">Email address</label>
+        <input [class.is-invalid]="!email.valid && email.touched"
+        type="email"
+        class="form-control"
+        id="nome"
+        placeholder="exemple@email.com"
+        name="email"
+        [(ngModel)]="this.user.email"
+        required
+        email
+        #email="ngModel"
+        >
+        <div *ngIf="!email.valid && email.touched" class="invalid-feedback">
+            Email Inválido
+        </div>
+    </div>
+
+
+
+
+
+   <div ngModelGroup="address" class="row form-group">
+
+    <div class="mb-3 form-group col-md-3">
+        <label for="cep" class="form-label">Cep</label>
+        <input [class.is-invalid]="!cep.valid && cep.touched"
+        type="text" class="form-control"
+        id="cep"
+        name="cep"
+        ngModel
+        required
+        #cep="ngModel"
+        (blur)="getCep(cep.value,f)"
+        [(ngModel)]="this.address.cep"
+        >
+        <div *ngIf="!cep.valid && cep.touched" class="invalid-feedback">
+            Cep Inválido
+        </div>
+    </div>
+
+
+
+    <div class="mb-3 form-group col-md-3">
+        <label for="numero" class="form-label">Número</label>
+        <input [class.is-invalid]="!numero.valid && numero.touched"
+        type="text" class="form-control"
+        id="numero"
+        name="numero"
+        ngModel
+        required
+        #numero="ngModel"
+        [(ngModel)]="this.address.numero"
+        >
+        <div *ngIf="!numero.valid && numero.touched" class="invalid-feedback">
+            Número Inválido
+        </div>
+    </div>
+
+
+
+    <div class="mb-3 form-group col-md-6">
+        <label for="complemento" class="form-label">Complemento</label>
+        <input [class.is-invalid]="!complemento.valid && complemento.touched"
+        type="text" class="form-control"
+        id="complemento"
+        name="complemento"
+        ngModel
+        required
+        #complemento="ngModel"
+        [(ngModel)]="this.address.complemento"
+
+        >
+        <div *ngIf="!complemento.valid && complemento.touched" class="invalid-feedback">
+            Complemento Inválido
+        </div>
+    </div>
+
+
+    <div class="mb-3 form-group col-md-12">
+        <label for="rua" class="form-label">rua</label>
+        <input [class.is-invalid]="!rua.valid && rua.touched"
+        type="text" class="form-control"
+        id="rua"
+        name="rua"
+        ngModel
+        required
+        #rua="ngModel"
+        [(ngModel)]="this.address.rua"
+
+        
+        >
+        <div *ngIf="!rua.valid && rua.touched" class="invalid-feedback">
+            rua Inválido
+        </div>
+    </div>
+
+
+
+    <div class="mb-3 form-group col-md-6">
+        <label for="bairro" class="form-label">bairro</label>
+        <input [class.is-invalid]="!bairro.valid && bairro.touched"
+        type="text" class="form-control"
+        id="bairro"
+        name="bairro"
+        ngModel
+        required
+        #bairro="ngModel"
+        [(ngModel)]="this.address.bairro"
+
+        
+        >
+        <div *ngIf="!bairro.valid && bairro.touched" class="invalid-feedback">
+            bairro Inválido
+        </div>
+    </div>
+
+
+
+    <div class="mb-3 form-group col-md-4">
+        <label for="cidade" class="form-label">cidade</label>
+        <input [class.is-invalid]="!cidade.valid && cidade.touched"
+        type="text" class="form-control"
+        id="cidade"
+        name="cidade"
+        ngModel
+        required
+        #cidade="ngModel"
+        [(ngModel)]="this.address.cidade"
+
+        
+        >
+        <div *ngIf="!cidade.valid && cidade.touched" class="invalid-feedback">
+            cidade Inválido
+        </div>
+    </div>
+
+
+
+    <div class="mb-3 form-group col-md-2">
+        <label for="estado" class="form-label">estado</label>
+        <input [class.is-invalid]="!estado.valid && estado.touched"
+        type="text" class="form-control"
+        id="estado"
+        name="estado"
+        ngModel
+        required
+        #estado="ngModel"
+        [(ngModel)]="this.address.estado"
+        
+        >
+        <div *ngIf="!estado.valid && estado.touched" class="invalid-feedback">
+            estado Inválido
+        </div>
+    </div>
+
+   </div>
+
+
+    <div>
+        <button [class.disabled]="!f.valid" type="submit" class="btn btn-primary">Submit</button>
+    </div>
+
+    <app-form-debug [form]="f"></app-form-debug>
+</form>

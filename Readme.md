@@ -135,6 +135,22 @@
 
 - [**Definir rota padrão e Wildcard**](/docs/contents/mod007/content10.md)
 
+## Modulo008 Formulário
+
+- [**Introdução**](/docs/contents/mod008/content01.md)
+
+- [**Formulários**](/docs/contents/mod008/content02.md)
+
+- [**Forms**](/docs/contents/mod008/content03.md)
+
+- [**Forms Inicializando valores com ngModel**](/docs/contents/mod008/content04.md)
+
+- [**Forms Validações nos campos**](/docs/contents/mod008/content05.md)
+
+- [**Forms aplicando css nas validações**](/docs/contents/mod008/content06.md)
+
+- [**Forms Desabilitando o botão de submit para formulário inválido**](/docs/contents/mod008/content07.md)
+
 
 
 

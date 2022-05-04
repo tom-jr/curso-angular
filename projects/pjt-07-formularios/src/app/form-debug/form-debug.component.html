@@ -1,0 +1,16 @@
+<div style="margin-top: 30px;" *ngIf="this.form">
+    <div>
+        Detalhes do Form
+    </div>
+    <pre>
+        Form Válido:{{this.form.valid}}
+    </pre>
+
+    <pre>
+        Form Submetido:{{this.form.submitted}}
+    </pre>
+
+    <pre>
+        Form Details:{{this.form.value | json}}
+    </pre>
+</div>
