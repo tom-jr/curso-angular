@@ -1,1 +1,97 @@
-<p>data-form works!</p>
+<form class="row g-3" [formGroup]="this.form"
+(submit)="onSubmit()"
+>
+    <div class="form-group">
+        <div class="col-md-12">
+            <label class="form-label">Name</label>
+            <input type="text" class="form-control"
+            formControlName="name"
+            [class.is-invalid]="this.fieldVerify('name')"
+            >
+            <app-invalid-field [field]="'nome'" class="invalid-feedback"></app-invalid-field>
+        </div>
+    
+        <div class="col-md-12">
+            <label class="form-label">Email Address</label>
+            <input type="email" class="form-control"
+            [class.is-invalid]="this.fieldVerify('email')"
+            formControlName="email"
+            >
+            <app-invalid-field [field]="'Email'" class="invalid-feedback"></app-invalid-field>
+        </div>
+
+        <div class="row" formGroupName="address">
+
+            <div class="col-md-3">
+                <label class="form-label">Cep</label>
+                <input type="email" class="form-control"
+                [class.is-invalid]="this.fieldVerify('address.cep')"
+                formControlName="cep"
+                (blur)="this.getCepRequest()"
+                >
+                <app-invalid-field [field]="'Cep'" class="invalid-feedback"></app-invalid-field>
+            </div>
+
+            <div class="col-md-3">
+                <label class="form-label">numero</label>
+                <input type="email" class="form-control"
+                [class.is-invalid]="this.fieldVerify('address.numero')"
+                formControlName="numero"
+                >
+                <app-invalid-field [field]="'numero'" class="invalid-feedback"></app-invalid-field>
+            </div>
+
+            <div class="col-md-6">
+                <label class="form-label">complemento</label>
+                <input type="email" class="form-control"
+                [class.is-invalid]="this.fieldVerify('address.complemento')"
+                formControlName="complemento"
+                >
+                <app-invalid-field [field]="'complemento'" class="invalid-feedback"></app-invalid-field>
+            </div>
+
+            <div class="col-md-12">
+                <label class="form-label">rua</label>
+                <input type="email" class="form-control"
+                [class.is-invalid]="this.fieldVerify('address.rua')"
+                formControlName="rua"
+                >
+                <app-invalid-field [field]="'rua'" class="invalid-feedback"></app-invalid-field>
+            </div>
+
+            <div class="col-md-7">
+                <label class="form-label">bairro</label>
+                <input type="email" class="form-control"
+                [class.is-invalid]="this.fieldVerify('address.bairro')"
+                formControlName="bairro"
+                >
+                <app-invalid-field [field]="'bairro'" class="invalid-feedback"></app-invalid-field>
+            </div>
+
+            <div class="col-md-3">
+                <label class="form-label">cidade</label>
+                <input type="email" class="form-control"
+                [class.is-invalid]="this.fieldVerify('address.cidade')"
+                formControlName="cidade"
+                >
+                <app-invalid-field [field]="'cidade'" class="invalid-feedback"></app-invalid-field>
+            </div>
+
+            <div class="col-md-2">
+                <label class="form-label">estado</label>
+                <input type="email" class="form-control"
+                [class.is-invalid]="this.fieldVerify('address.estado')"
+                formControlName="estado"
+                >
+                <app-invalid-field [field]="'estado'" class="invalid-feedback"></app-invalid-field>
+            </div>
+
+        </div>
+    </div>
+
+    <div>
+        <button class="btn btn-primary" type="submit">Submit</button>
+    </div>
+
+    <app-form-debug [form]="this.form"></app-form-debug>
+</form>
